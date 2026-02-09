@@ -215,39 +215,74 @@
 
 @media (max-width: 968px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
     justify-content: center;
-    padding-top: 120px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    gap: 40px;
   }
 
   .hero-content {
     align-items: center;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
   }
 
   .subtitle {
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    margin-bottom: 2rem;
+    font-size: 1rem;
   }
 
   .cta-container {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .hero-visual {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    width: 280px;
+    height: 280px;
   }
 
   .gradient-blob {
     width: 300px;
     height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .image-container {
+    width: 240px;
+    height: 240px;
   }
 }
