@@ -1,0 +1,124 @@
+:root {
+  --font-main: 'Outfit', sans-serif;
+
+  /* Deep Cosmos Theme (User Requested) */
+  --color-bg: #050B1E;
+  --color-bg-secondary: #0B122F;
+
+  --color-text: #E5E7EB;
+  --color-text-muted: #9CA3AF;
+
+  /* Accents */
+  --color-accent: #4FC3F7;
+  /* Glow Blue */
+  --color-accent-glow: rgba(79, 195, 247, 0.6);
+
+  --color-purple: #8B5CF6;
+  /* Neon Purple */
+  --color-pink: #f472b6;
+  /* Keeping Pink as tertiary for gradients */
+
+  --gradient-main: linear-gradient(135deg, var(--color-accent), var(--color-purple));
+  --gradient-text: linear-gradient(to right, var(--color-accent), var(--color-purple), var(--color-pink));
+
+  /* Enhanced Depth */
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px var(--color-accent-glow);
+
+  --radius-md: 0.75rem;
+  --radius-lg: 1.5rem;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-secondary);
+  border-radius: 4px;
+}
+
+/* Animations */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Children Helper */
+.reveal-stagger>* {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-stagger.is-visible>* {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-stagger.is-visible>*:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.reveal-stagger.is-visible>*:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.reveal-stagger.is-visible>*:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.reveal-stagger.is-visible>*:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.reveal-stagger.is-visible>*:nth-child(5) {
+  transition-delay: 0.5s;
+}

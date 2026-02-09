@@ -1,0 +1,91 @@
+.about {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.about-container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    font-weight: 700;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Soft shadow like the screenshot */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    /* Blue icon color */
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    /* Dark text for title */
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.about-card p {
+    color: #666;
+    /* Gray text for description */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Dark mode adjustments if the rest of the site is dark */
+@media (prefers-color-scheme: dark) {
+    /* Assuming the user wants to keep the white card look from screenshot, 
+       but if the site is dark theme, we might need to adjust. 
+       Based on the screenshot which has white cards on white/light background,
+       I will keep it light for now, or use a very light grey if the main background is dark.
+       However, the prompt screenshot shows white cards.
+       If the portfolio has a global dark theme, these white cards will stand out. 
+       Let's stick to the screenshot design: White cards. 
+    */
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 20px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+}
