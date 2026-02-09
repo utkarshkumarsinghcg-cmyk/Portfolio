@@ -32,11 +32,20 @@ const Projects = () => {
 
 
      {
-      id: 4,
+      id: 8,
       title: "Magicbricks-clone",
       description: "A responsive static Magicbricks clone focusing on layout, design, and UI structure.",
       tags: ["HTML", "CSS"],
       link: "https://magickbrick-clone.netlify.app/"
+    },
+
+
+     {
+      id: 7,
+      title: "Study-Clock",
+      description: "This is a study clock that helps you to study for a certain amount of time and take breaks in between. It have timer and stop watch features and also to-do list features.",
+      tags: ["React"],
+      link: "https://clock-timer-project.vercel.app/"
     },
 
      
