@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="hero-visual">
         <div className="gradient-blob"></div>
         <div className="image-container floating">
-          <img src="./img.png" alt="Utkarsh Kumar Singh" className="profile-img" />
+          <img src="https://github.com/utkarshkumarsinghcg-cmyk/Portfolio/blob/main/img.png?raw=true" alt="Utkarsh Kumar Singh" className="profile-img" />
         </div>
       </div>
     </section>
