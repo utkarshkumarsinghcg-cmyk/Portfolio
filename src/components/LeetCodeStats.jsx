@@ -39,7 +39,12 @@ const LeetCodeStats = () => {
                   }
                 `;
 
-                const response = await fetch('/leetcode-api/graphql', {
+                // Determine API endpoint based on environment
+                const apiUrl = import.meta.env.DEV
+                    ? '/leetcode-api/graphql'
+                    : '/api/leetcode';
+
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
