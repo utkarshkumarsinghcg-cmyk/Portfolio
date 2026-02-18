@@ -1,0 +1,136 @@
+.heatmap-container {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.heatmap-stats {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.h-stat-label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.h-stat-val {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.heatmap-scroll {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.heatmap-graph {
+    display: flex;
+    flex-direction: column;
+    min-width: max-content;
+}
+
+.month-row {
+    position: relative;
+    height: 20px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    /* Space for day labels */
+}
+
+.month-label {
+    position: absolute;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.graph-body {
+    display: flex;
+    gap: 5px;
+}
+
+.day-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    /* Alignment tweak */
+    padding-bottom: 15px;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    height: 100px;
+    /* 7 cells * 13px approx */
+}
+
+/* Weeks formatting */
+.weeks-grid {
+    display: flex;
+    gap: 3px;
+}
+
+.week-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.day-cell {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.day-cell:hover {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Legend */
+.heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    justify-content: flex-end;
+}
+
+.day-cell.sm {
+    width: 10px;
+    height: 10px;
+}
+
+/* Levels */
+.level-0 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.level-1 {
+    background-color: rgba(79, 195, 247, 0.3);
+}
+
+.level-2 {
+    background-color: rgba(79, 195, 247, 0.5);
+}
+
+.level-3 {
+    background-color: rgba(79, 195, 247, 0.7);
+}
+
+.level-4 {
+    background-color: var(--color-accent);
+}

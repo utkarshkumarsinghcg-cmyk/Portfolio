@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ParticleNetwork from './components/ParticleNetwork';
 import Reveal from './components/Reveal';
+import LeetCodeStats from './components/LeetCodeStats';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Reveal><Hero /></Reveal>
         <Reveal><About /></Reveal>
         <Reveal><Skills /></Reveal>
+        <Reveal><LeetCodeStats /></Reveal>
         <Reveal><Services /></Reveal>
         <Reveal><Projects /></Reveal>
         <Reveal><Education /></Reveal>
