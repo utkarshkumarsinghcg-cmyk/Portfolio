@@ -1,9 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Theme state
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+  // Theme toggle side effect
+  useEffect(() => {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +53,11 @@ const Header = () => {
             <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
             <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
             <li>
+              <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+                {theme === 'light' ? <FaMoon /> : <FaSun />}
+              </button>
+            </li>
+            <li>
               <a
                 href="/resume.pdf"
                 className="resume-btn"
@@ -42,7 +65,6 @@ const Header = () => {
                 rel="noopener noreferrer"
                 onClick={(e) => {
                   setMenuOpen(false);
-                  // Create a temporary link to trigger download
                   const link = document.createElement('a');
                   link.href = '/resume.pdf';
                   link.download = 'Utkarsh_Resume.pdf';

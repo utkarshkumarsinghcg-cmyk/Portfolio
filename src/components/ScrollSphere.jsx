@@ -8,14 +8,8 @@ const ScrollSphere = () => {
         const mount = mountRef.current;
         if (!mount) return;
 
-        // Use getComputedStyle to read theme colors from root (or hardcode to match warm theme)
-        const bgColor = '#0C0A09';
-        const particleColor = 0xFF6B6B; // Corresponds to --color-accent Vibrant Coral/Red
-
         // 1. Scene setup
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(bgColor);
-        scene.fog = new THREE.FogExp2(bgColor, 0.012);
 
         // 2. Camera setup
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -47,6 +41,7 @@ const ScrollSphere = () => {
         mount.appendChild(renderer.domElement);
 
         // 4. Particles Data Preparation
+        const particleColor = 0xFF6B6B; // Corresponds to --color-accent Vibrant Coral/Red
         const particlesCount = 5000;
         const geometry = new THREE.BufferGeometry();
 
@@ -205,7 +200,7 @@ const ScrollSphere = () => {
                 height: '100%',
                 zIndex: -1,
                 pointerEvents: 'none',
-                background: '#0C0A09' // Fallback identical to canvas bg
+                background: 'var(--color-bg)' // Now reading correctly from index.css for light/dark support
             }}
         />
     );

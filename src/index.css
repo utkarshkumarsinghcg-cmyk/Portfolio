@@ -35,6 +35,27 @@
   --radius-lg: 1.5rem;
 }
 
+/* Light Theme Overrides */
+[data-theme='light'] {
+  --color-bg: #F9FAFB;
+  /* Soft light grey/white */
+  --color-bg-secondary: #FFFFFF;
+  /* Pure white */
+  --color-text: #1C1917;
+  /* Dark charcoal text */
+  --color-text-muted: #57534E;
+  /* Dark warm grey */
+  --color-accent: #EF4444;
+  /* Keep warm red accent */
+  --color-purple: #F97316;
+  /* Warm orange */
+  --color-pink: #E11D48;
+  /* Deeper pink */
+
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  /* Lighter shadow */
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
