@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skills.css';
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb, SiRedux } from 'react-icons/si';
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaPython, FaGithub } from 'react-icons/fa';
+import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb, SiRedux, SiPostman, SiVercel, SiNetlify, SiExpress } from 'react-icons/si';
 
 const Skills = () => {
     const skillCategories = [
@@ -20,6 +20,7 @@ const Skills = () => {
             title: "Backend & Languages",
             skills: [
                 { icon: <FaNodeJs />, name: "Node.js", color: "#339933" },
+                { icon: <SiExpress />, name: "Express.js", color: "#FFFFFF" },
                 { icon: <SiMongodb />, name: "MongoDB", color: "#47A248" },
                 { icon: <FaPython />, name: "Python", color: "#3776AB" },
                 { icon: <SiNumpy />, name: "NumPy", color: "#013243" },
@@ -31,6 +32,10 @@ const Skills = () => {
             skills: [
                 { icon: <SiFigma />, name: "Figma", color: "#F24E1E" },
                 { icon: <FaGitAlt />, name: "Git", color: "#F05032" },
+                { icon: <FaGithub />, name: "GitHub", color: "#FFFFFF" },
+                { icon: <SiPostman />, name: "Postman", color: "#FF6C37" },
+                { icon: <SiVercel />, name: "Vercel", color: "#FFFFFF" },
+                { icon: <SiNetlify />, name: "Netlify", color: "#00C7B7" }
             ]
         }
     ];
