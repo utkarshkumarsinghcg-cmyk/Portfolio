@@ -22,17 +22,20 @@ const ScrollSphere = () => {
 
         const updateCameraPosition = () => {
             if (window.innerWidth <= 480) {
+                // Phones: Image is usually centered
                 camera.position.x = 0;
-                camera.position.y = -6;
-                camera.position.z = 45; // Move back to make smaller
+                camera.position.y = -6.5;
+                camera.position.z = 45;
             } else if (window.innerWidth <= 968) {
+                // Tablets: Image is usually centered
                 camera.position.x = 0;
-                camera.position.y = -4;
-                camera.position.z = 38;
+                camera.position.y = -3.5;
+                camera.position.z = 40;
             } else {
-                camera.position.x = -12; // Shift left
-                camera.position.y = 0;
-                camera.position.z = 30;
+                // Desktop: Profile picture is slightly offset to the right by grid, let's dial it in
+                camera.position.x = -8.5; // Slightly less left so it perfectly orbits the image
+                camera.position.y = -1; // Pull slightly down to center vertical with image bounds
+                camera.position.z = 32;
             }
         };
         updateCameraPosition();
