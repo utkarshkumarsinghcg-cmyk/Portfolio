@@ -39,7 +39,10 @@ const Hero = () => {
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="badge-container">
-          <span className="badge">Available for Work</span>
+          <span className="badge">
+            <span className="blinking-dot"></span>
+            Available for Work
+          </span>
         </div>
 
         <h1 className="title">

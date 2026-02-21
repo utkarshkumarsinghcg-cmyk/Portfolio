@@ -1,12 +1,16 @@
 :root {
   --font-main: 'Outfit', sans-serif;
 
-  /* Deep Cosmos Theme (User Requested) */
-  --color-bg: #050B1E;
-  --color-bg-secondary: #0B122F;
+  /* Smoky Obsidian Theme (New Background) */
+  --color-bg: #0C0A09;
+  /* Very deep warm black/stone */
+  --color-bg-secondary: #1C1917;
+  /* Dark charcoal grey */
 
-  --color-text: #E5E7EB;
-  --color-text-muted: #9CA3AF;
+  --color-text: #FAFAF9;
+  /* Warm off-white */
+  --color-text-muted: #A8A29E;
+  /* Warm grey for muted text */
 
   /* Warm Fire Theme */
   --color-accent: #FF6B6B;

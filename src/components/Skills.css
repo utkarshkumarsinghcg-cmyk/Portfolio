@@ -7,8 +7,8 @@
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: #4a90e2;
-    /* Matches the blue in the screenshot */
+    color: var(--color-accent);
+    /* Changed to use variable for your new theme */
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -21,13 +21,50 @@
     line-height: 1.6;
 }
 
+.skills-categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--gradient-main);
+    border-radius: 2px;
+}
+
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
     perspective: 1000px;
 }
 
@@ -109,6 +146,14 @@
 
     .section-header h2 {
         font-size: 2rem;
+    }
+
+    .skill-category {
+        padding: 20px 10px;
+    }
+
+    .category-title {
+        font-size: 1.4rem;
     }
 
     .skill-card {
