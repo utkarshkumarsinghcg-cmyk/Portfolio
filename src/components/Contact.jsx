@@ -25,6 +25,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/utkarsh-kumar-singh-28ba04378/">LinkedIn</a>
               <a href="https://github.com/utkarshkumarsinghcg-cmyk">GitHub</a>
               <a href="https://x.com/UtkarshSin78788">Twitter</a>
+              <a href="https://leetcode.com/u/XOkYAgzRLP/">LeetCode</a>
             </div>
           </div>
         </div>
