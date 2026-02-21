@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skills.css';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb } from 'react-icons/si';
+import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb, SiRedux } from 'react-icons/si';
 
 const Skills = () => {
     const skillCategories = [
@@ -9,6 +9,7 @@ const Skills = () => {
             title: "Frontend Development",
             skills: [
                 { icon: <FaReact />, name: "React", color: "#61DAFB" },
+                { icon: <SiRedux />, name: "Redux", color: "#764ABC" },
                 { icon: <FaJs />, name: "JavaScript", color: "#F7DF1E" },
                 { icon: <FaHtml5 />, name: "HTML5", color: "#E34F26" },
                 { icon: <FaCss3Alt />, name: "CSS3", color: "#1572B6" },
