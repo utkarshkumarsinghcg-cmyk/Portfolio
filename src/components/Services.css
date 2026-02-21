@@ -1,5 +1,7 @@
 .services {
-    background: var(--color-bg);
+    /* Removed solid background to allow 3D sphere to show through */
+    position: relative;
+    z-index: 10;
 }
 
 .services-grid {
@@ -9,19 +11,22 @@
 }
 
 .service-card {
-    background: var(--color-bg-secondary);
-    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
+    padding: 2.5rem;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    background: linear-gradient(145deg, var(--color-bg-secondary), rgba(30, 41, 59, 0.9));
-    border-color: var(--color-accent);
-    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.15);
+    /* Warm fire glow */
 }
 
 .service-icon {
@@ -29,9 +34,11 @@
     margin-bottom: 1.5rem;
     display: inline-block;
     padding: 1rem;
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(255, 107, 107, 0.1);
+    /* Warm fire background */
+    color: var(--color-accent);
+    /* Make sure icon matches the red */
     border-radius: 50%;
-    margin-bottom: 1.5rem;
 }
 
 .service-card h3 {
