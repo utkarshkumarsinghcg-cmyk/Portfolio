@@ -120,17 +120,21 @@
 }
 
 .level-1 {
-    background-color: rgba(79, 195, 247, 0.3);
+    background-color: rgba(255, 107, 107, 0.3);
+    /* Warm Coral Light */
 }
 
 .level-2 {
-    background-color: rgba(79, 195, 247, 0.5);
+    background-color: rgba(255, 107, 107, 0.5);
+    /* Warm Coral Medium */
 }
 
 .level-3 {
-    background-color: rgba(79, 195, 247, 0.7);
+    background-color: rgba(255, 107, 107, 0.7);
+    /* Warm Coral Strong */
 }
 
 .level-4 {
     background-color: var(--color-accent);
+    /* Solid Warm Fire Main Accent */
 }
