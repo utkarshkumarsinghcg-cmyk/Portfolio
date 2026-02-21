@@ -19,11 +19,23 @@ const ScrollSphere = () => {
 
         // 2. Camera setup
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 30; // Move back enough to see the radius 12 sphere perfectly
 
-        // Shift camera left so the sphere appears on the right side of the screen
-        // This puts it directly behind the Hero section profile picture
-        camera.position.x = window.innerWidth > 968 ? -10 : 0;
+        const updateCameraPosition = () => {
+            if (window.innerWidth <= 480) {
+                camera.position.x = 0;
+                camera.position.y = -6;
+                camera.position.z = 45; // Move back to make smaller
+            } else if (window.innerWidth <= 968) {
+                camera.position.x = 0;
+                camera.position.y = -4;
+                camera.position.z = 38;
+            } else {
+                camera.position.x = -12; // Shift left
+                camera.position.y = 0;
+                camera.position.z = 30;
+            }
+        };
+        updateCameraPosition();
 
         // 3. Renderer setup
         const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: true });
@@ -126,6 +138,7 @@ const ScrollSphere = () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
+            updateCameraPosition();
         };
         window.addEventListener('resize', handleResize);
 
