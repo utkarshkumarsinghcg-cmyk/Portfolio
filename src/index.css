@@ -8,15 +8,17 @@
   --color-text: #E5E7EB;
   --color-text-muted: #9CA3AF;
 
-  /* Accents */
-  --color-accent: #4FC3F7;
-  /* Glow Blue */
-  --color-accent-glow: rgba(79, 195, 247, 0.6);
+  /* Warm Fire Theme */
+  --color-accent: #FF6B6B;
+  /* Vibrant Coral/Red */
+  /* Glow Red */
+  --color-accent-glow: rgba(255, 107, 107, 0.6);
 
-  --color-purple: #8B5CF6;
-  /* Neon Purple */
-  --color-pink: #f472b6;
-  /* Keeping Pink as tertiary for gradients */
+  --color-purple: #FCA048;
+  /* Warm Orange/Gold */
+  /* Neon Pink */
+  --color-pink: #FF3366;
+  /* Bright Pink */
 
   --gradient-main: linear-gradient(135deg, var(--color-accent), var(--color-purple));
   --gradient-text: linear-gradient(to right, var(--color-accent), var(--color-purple), var(--color-pink));
