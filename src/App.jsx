@@ -9,14 +9,14 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ParticleNetwork from './components/ParticleNetwork';
+import ParticleBackground from './components/ParticleBackground';
 import Reveal from './components/Reveal';
 import LeetCodeStats from './components/LeetCodeStats';
 
 function App() {
   return (
     <div className="App">
-      <ParticleNetwork />
+      <ParticleBackground />
       <Header />
       <main>
         <Reveal><Hero /></Reveal>
