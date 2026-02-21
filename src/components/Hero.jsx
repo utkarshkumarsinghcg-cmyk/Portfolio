@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaJs, FaDatabase } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb } from 'react-icons/si';
+import { FaGithub, FaLinkedinIn, FaReact, FaNodeJs, FaJs, FaDatabase, FaTwitter } from 'react-icons/fa';
+import { SiTailwindcss, SiMongodb, SiLeetcode } from 'react-icons/si';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -64,8 +64,10 @@ const Hero = () => {
           <a href="#contact" className="btn btn-outline">Contact Me</a>
 
           <div className="social-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="https://www.linkedin.com/in/utkarsh-kumar-singh-28ba04378/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://github.com/utkarshkumarsinghcg-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
+            <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://leetcode.com/u/XOkYAgzRLP/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
           </div>
         </div>
 
