@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skills.css';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiFigma, SiNumpy, SiPandas } from 'react-icons/si';
+import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb } from 'react-icons/si';
 
 const Skills = () => {
     const skillCategories = [
@@ -19,6 +19,7 @@ const Skills = () => {
             title: "Backend & Languages",
             skills: [
                 { icon: <FaNodeJs />, name: "Node.js", color: "#339933" },
+                { icon: <SiMongodb />, name: "MongoDB", color: "#47A248" },
                 { icon: <FaPython />, name: "Python", color: "#3776AB" },
                 { icon: <SiNumpy />, name: "NumPy", color: "#013243" },
                 { icon: <SiPandas />, name: "Pandas", color: "#150458" },
