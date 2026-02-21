@@ -32,9 +32,8 @@ const ScrollSphere = () => {
                 camera.position.y = -3.5;
                 camera.position.z = 40;
             } else {
-                // Desktop: Profile picture is significantly to the right,
-                // so we push the camera further left to push the sphere right
-                camera.position.x = -14;
+                // Desktop: Profile picture is slightly offset to the right by grid
+                camera.position.x = -11;
                 camera.position.y = -1.5;
                 camera.position.z = 32;
             }
