@@ -4,7 +4,7 @@ import Heatmap from './Heatmap';
 import { SiLeetcode } from 'react-icons/si';
 import { FaTrophy, FaCheckCircle, FaCode } from 'react-icons/fa';
 
-const LEETCODE_USERNAME = "XOkYAgzRLP";
+const LEETCODE_USERNAME = "utkarshkumarsingh";
 
 const LeetCodeStats = () => {
     const [stats, setStats] = useState(null);

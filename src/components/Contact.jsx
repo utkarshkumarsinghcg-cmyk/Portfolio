@@ -33,7 +33,7 @@ const Contact = () => {
               <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter />
               </a>
-              <a href="https://leetcode.com/u/XOkYAgzRLP/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+              <a href="https://leetcode.com/u/utkarshkumarsingh/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
                 <SiLeetcode />
               </a>
             </div>

@@ -67,7 +67,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/utkarsh-kumar-singh-28ba04378/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="https://github.com/utkarshkumarsinghcg-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
             <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-            <a href="https://leetcode.com/u/XOkYAgzRLP/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
+            <a href="https://leetcode.com/u/utkarshkumarsingh/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
           </div>
         </div>
 

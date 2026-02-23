@@ -52,6 +52,7 @@
     gap: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(10px);
+    overflow: hidden;
 }
 
 .stat-card:hover {
@@ -73,8 +74,9 @@
 }
 
 .stat-info h3 {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     margin-bottom: 0.2rem;
+    word-break: break-word;
 }
 
 .stat-info p {
@@ -234,5 +236,31 @@
 
     .leetcode-container {
         gap: 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .stat-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .difficulty-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .diff-label {
+        width: auto;
+    }
+
+    .diff-count {
+        width: 100%;
+        text-align: left;
     }
 }
