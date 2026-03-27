@@ -1,34 +1,40 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import Reveal from './Reveal';
+import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop } from 'react-icons/fa';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('All');
 
   const projectList = [
     {
+      id: 11,
+      title: "Frontend Odyssey Hackathon",
+      description: "A fully frontend interactive project developed for the Frontend Odyssey Hackathon. Built with React, featuring rich animations and an immersive UI/UX.",
+      tags: ["React", "Animations", "Frontend"],
+      link: "https://frontend-odyssey-8c6v.vercel.app/",
+      category: "Webpages",
+      icon: <FaLaptop />
+    },
+    {
       id: 4,
       title: "Forme-Clone",
       description: "A modern hardware solutions website showcasing tools, components, and technology essentials.",
       tags: ["HTML", "CSS"],
       link: "https://frome.netlify.app/",
-      category: "Webpages"
+      videoLink: "https://youtu.be/YicDrCGcrw4?si=WJygjlAix0Ow9vtq",
+      category: "Webpages",
+      icon: <FaDesktop />
     },
     {
       id: 5,
       title: "Cinnamon kitchen - Clone",
-      description: "The gifting page of the website showcases a range of artisanal, healthy snack hampers and gift sets that can be shipped across India with customized packaging and messages.",
+      description: "The gifting page of the website showcases a range of artisanal, healthy snack hampers and gift sets that can be shipped across India.",
       tags: ["HTML", "CSS"],
       link: "https://cinnamonkitchen-clone.netlify.app/",
-      category: "Webpages"
-    },
-    {
-      id: 6,
-      title: "Incredible India-clone",
-      description: "A static multi-page clone of the Incredible India tourism website built using HTML and CSS.",
-      tags: ["HTML", "CSS"],
-      link: "https://incredibleindiaclone.netlify.app/",
-      category: "Webpages"
+      videoLink: "https://youtu.be/i_h8CI5B6Nc?si=rC1ERdR1VYUvMmXH",
+      category: "Webpages",
+      icon: <FaStore />
     },
     {
       id: 8,
@@ -36,31 +42,36 @@ const Projects = () => {
       description: "A responsive static Magicbricks clone focusing on layout, design, and UI structure.",
       tags: ["HTML", "CSS"],
       link: "https://magickbrick-clone.netlify.app/",
-      category: "Webpages"
+      videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
+      category: "Webpages",
+      icon: <FaBuilding />
     },
     {
       id: 7,
       title: "Study-Clock",
-      description: "This is a study clock that helps you to study for a certain amount of time and take breaks in between. It has timer and stop watch features and also a to-do list.",
+      description: "This is a study clock that helps you to study for a certain amount of time and take breaks in between. Includes timer and to-do list.",
       tags: ["React"],
       link: "https://clock-timer-project.vercel.app/",
-      category: "Webpages"
+      category: "Webpages",
+      icon: <FaClock />
     },
     {
       id: 9,
       title: "Tic-Tac-Toe App",
       description: "A fully functional interactive Tic-Tac-Toe game built with modern web technologies and logic.",
       tags: ["React", "JavaScript"],
-      link: "#", // Placeholder
-      category: "Game"
+      link: "#",
+      category: "Game",
+      icon: <FaGamepad />
     },
     {
       id: 10,
       title: "E-Commerce Dashboard",
       description: "A massive full-stack inventory management system actively in development with live data tracking.",
       tags: ["React", "Node.js", "MongoDB"],
-      link: "#", // Placeholder
-      category: "Ongoing"
+      link: "#",
+      category: "Ongoing",
+      icon: <FaChartBar />
     }
   ];
 
@@ -90,14 +101,32 @@ const Projects = () => {
 
       <Reveal className="projects-grid reveal-stagger">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="project-card">
+          <div key={project.id} className="project-card modern-card">
+            
+            <div className="card-top-decoration"></div>
+            
             <div className="card-content">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <div className="card-header">
+                <div className="card-logo-wrapper">
+                  {project.icon}
+                </div>
+                <h3>{project.title}</h3>
+              </div>
+              
+              <p className="description-text">{project.description}</p>
+              
               <div className="tags">
                 {project.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
               </div>
-              <a href={project.link} className="card-link" target="_blank" rel="noopener noreferrer">View Project &rarr;</a>
+              
+              <div className="card-actions">
+                <a href={project.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">View Site</a>
+                {project.videoLink && (
+                  <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer">
+                    <span className="play-icon">▶</span> Demo
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
