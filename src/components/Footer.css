@@ -13,7 +13,23 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #ff6b6b;
+  transform: translateY(-3px);
 }
 
 .footer p {

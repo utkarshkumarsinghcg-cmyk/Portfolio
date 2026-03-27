@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 const Contact = () => {
@@ -32,6 +32,9 @@ const Contact = () => {
               </a>
               <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter />
+              </a>
+              <a href="https://www.youtube.com/@UtkarshsBuilds" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <FaYoutube />
               </a>
               <a href="https://leetcode.com/u/utkarshkumarsingh/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
                 <SiLeetcode />

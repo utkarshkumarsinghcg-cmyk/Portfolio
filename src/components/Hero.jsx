@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import { FaGithub, FaLinkedinIn, FaReact, FaNodeJs, FaJs, FaDatabase, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaReact, FaNodeJs, FaJs, FaDatabase, FaTwitter, FaDownload, FaYoutube } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiLeetcode } from 'react-icons/si';
 
 const Hero = () => {
@@ -61,12 +61,24 @@ const Hero = () => {
 
         <div className="cta-group">
           <a href="#projects" className="btn btn-primary">View My Work</a>
-          <a href="#contact" className="btn btn-outline">Contact Me</a>
+          <a
+            href="https://drive.google.com/file/d/1gd8rC9jqg39QoFbZ4-nqfzD5FLbz1xXP/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-resume"
+          >
+            <span className="resume-btn-inner">
+              <FaDownload className="resume-icon" />
+              <span>Resume</span>
+            </span>
+            <span className="resume-btn-glow"></span>
+          </a>
 
           <div className="social-links">
             <a href="https://www.linkedin.com/in/utkarsh-kumar-singh-28ba04378/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
             <a href="https://github.com/utkarshkumarsinghcg-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
             <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://www.youtube.com/@UtkarshsBuilds" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
             <a href="https://leetcode.com/u/utkarshkumarsingh/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
           </div>
         </div>

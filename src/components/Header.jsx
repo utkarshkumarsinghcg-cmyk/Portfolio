@@ -34,8 +34,12 @@ const Header = () => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <a href="#" className="logo">
-          UTKARSH<span>.</span>
+        <a href="#" className="logo-split" aria-label="UKS Logo">
+          <div className="logo-wrapper">
+            <span className="logo-text">UKS</span>
+            <div className="logo-slice"></div>
+            <div className="logo-glow"></div>
+          </div>
         </a>
 
         <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>

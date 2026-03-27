@@ -178,6 +178,100 @@
   transform: translateY(-3px);
 }
 
+/* ── Animated Resume Button ── */
+@keyframes resumeBorderGlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes resumeIconBounce {
+  0%, 100% { transform: translateY(0); }
+  40%       { transform: translateY(4px); }
+  60%       { transform: translateY(-2px); }
+}
+
+.btn-resume {
+  position: relative;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Gradient border via pseudo-element */
+  isolation: isolate;
+}
+
+/* animated gradient border ring */
+.btn-resume::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-md) + 2px);
+  background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff6b6b);
+  background-size: 300% 300%;
+  animation: resumeBorderGlow 3s ease infinite;
+  z-index: -2;
+}
+
+/* inner fill to mask the gradient border */
+.btn-resume::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: calc(var(--radius-md) - 1px);
+  background: #0d0f1a;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.btn-resume:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(255, 107, 107, 0.35);
+}
+
+.btn-resume:hover::after {
+  background: #131629;
+}
+
+.resume-btn-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  position: relative;
+  z-index: 1;
+}
+
+.resume-icon {
+  font-size: 0.95rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-resume:hover .resume-icon {
+  animation: resumeIconBounce 0.7s ease forwards;
+}
+
+/* Radial glow that breathes */
+.resume-btn-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at center, rgba(255, 107, 107, 0.18) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.btn-resume:hover .resume-btn-glow {
+  opacity: 1;
+}
+
 .social-links {
   display: flex;
   gap: 1rem;

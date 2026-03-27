@@ -74,9 +74,12 @@
 }
 
 .stat-info h3 {
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-size: clamp(1rem, 3vw, 1.6rem);
     margin-bottom: 0.2rem;
-    word-break: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
 }
 
 .stat-info p {

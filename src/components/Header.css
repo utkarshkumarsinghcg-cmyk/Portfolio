@@ -29,16 +29,101 @@
   align-items: center;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.5px;
+/* ─── Cyber-Laser Split Logo ────────────────────────────────────────── */
+@keyframes laserSweep {
+  0%   { left: -10%; opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { left: 110%; opacity: 0; }
 }
 
-.logo span {
-  color: var(--color-accent);
+@keyframes logoPulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 107, 107, 0.2); }
+  50%       { text-shadow: 0 0 20px rgba(255, 107, 107, 0.5), 0 0 30px rgba(255, 107, 107, 0.3); }
 }
+
+.logo-split {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  overflow: hidden; /* Clips the laser sweep */
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #fff;
+  z-index: 1;
+  position: relative;
+  transition: all 0.4s ease;
+  animation: logoPulse 4s infinite;
+}
+
+/* The Scanning Laser Beam */
+.logo-slice {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #ff6b6b;
+  box-shadow: 0 0 15px #ff6b6b, 0 0 30px #ff6b6b;
+  z-index: 2;
+  animation: laserSweep 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Background Glow following the laser roughly */
+.logo-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 107, 107, 0.05) 45%, 
+    rgba(255, 107, 107, 0.15) 50%, 
+    rgba(255, 107, 107, 0.05) 55%, 
+    transparent 100%
+  );
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-split:hover .logo-glow {
+  opacity: 1;
+}
+
+/* Interaction Effects */
+.logo-split:hover .logo-wrapper {
+  background: rgba(255, 107, 107, 0.05);
+  border-color: rgba(255, 107, 107, 0.3);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.logo-split:hover .logo-text {
+  letter-spacing: 5px;
+  color: #ff6b6b;
+  text-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+}
+
+.logo-split:hover .logo-slice {
+  animation-duration: 1s; /* Fast scan on hover */
+  width: 5px;
+}
+
 
 .nav-menu ul {
   display: flex;
