@@ -31,6 +31,12 @@ const LeetCodeStats = () => {
                         realName
                         userAvatar
                       }
+                      badges {
+                        id
+                        name
+                        icon
+                        creationDate
+                      }
                     }
                      allQuestionsCount {
                         difficulty
@@ -103,7 +109,8 @@ const LeetCodeStats = () => {
                     totalMedium,
                     totalHard,
                     avatar: user.profile.userAvatar,
-                    submissionCalendar: user.submissionCalendar
+                    submissionCalendar: user.submissionCalendar,
+                    badges: user.badges || []
                 });
                 setLoading(false);
 
@@ -204,6 +211,30 @@ const LeetCodeStats = () => {
                         <span className="diff-count">{stats.hardSolved} <span className="diff-total">/ {stats.totalHard}</span></span>
                     </div>
                 </div>
+            </div>
+
+            <div className="leetcode-badges-section">
+                <h3 className="section-subtitle">Earned Badges</h3>
+                {stats.badges && stats.badges.length > 0 ? (
+                    <div className="badges-grid">
+                        {stats.badges.map((badge, index) => (
+                            <div key={badge.id} className="badge-card" title={badge.name} style={{ animationDelay: `${index * 0.15}s` }}>
+                                <div className="badge-icon-wrapper">
+                                    <img
+                                        src={badge.icon.startsWith('http') ? badge.icon : `https://leetcode.com${badge.icon}`}
+                                        alt={badge.name}
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <span className="badge-name">{badge.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="no-badges">
+                        <p>Keep solving daily problems to earn badges!</p>
+                    </div>
+                )}
             </div>
 
             <div className="leetcode-actions">
