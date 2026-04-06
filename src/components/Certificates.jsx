@@ -4,6 +4,8 @@ import Reveal from './Reveal';
 import { FaCertificate, FaMedal, FaExternalLinkAlt, FaCalendarAlt, FaTrophy } from 'react-icons/fa';
 import cert1 from '../assets/Certificate1.pdf';
 import cert2 from '../assets/Certificate2.pdf';
+import certImg1 from '../assets/image 44.png';
+import certImg2 from '../assets/image 45.png';
 
 const Certificates = () => {
   const certificateList = [
@@ -16,7 +18,7 @@ const Certificates = () => {
       badge: "1st Place",
       link: cert1,
       icon: <FaTrophy />,
-      image: "https://images.unsplash.com/photo-1544923246-77307dd654ca?auto=format&fit=crop&q=80&w=600"
+      image: certImg1
     },
     {
       id: 2,
@@ -27,7 +29,7 @@ const Certificates = () => {
       badge: "Finalist",
       link: cert2,
       icon: <FaMedal />,
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=600"
+      image: certImg2
     }
   ];
 
