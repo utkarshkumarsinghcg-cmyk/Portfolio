@@ -4,29 +4,29 @@ import Reveal from './Reveal';
 import { FaCertificate, FaMedal, FaExternalLinkAlt, FaCalendarAlt, FaTrophy } from 'react-icons/fa';
 import cert1 from '../assets/Certificate1.pdf';
 import cert2 from '../assets/Certificate2.pdf';
-import certImg1 from '../assets/image 44.png';
-import certImg2 from '../assets/image 45.png';
+import certImg1 from '../assets/C1.png';
+import certImg2 from '../assets/C2.png';
 
 const Certificates = () => {
   const certificateList = [
     {
       id: 1,
-      title: "Winner - Frontend Odyssey",
-      organization: "Tech Community",
-      description: "Secured 1st place in the Frontend Odyssey Hackathon for building an immersive UI/UX experience with React and Framer Motion.",
-      date: "March 2026",
-      badge: "1st Place",
+      title: "AI - WebForge",
+      organization: "Amity School of Engineering & Technology, Noida",
+      description: "Participated in a fast-paced challenge to design and develop a stunning portfolio website within 36 hours, showcasing technical expertise and creative design.",
+      date: "April 2026",
+      badge: "Participant",
       link: cert1,
       icon: <FaTrophy />,
       image: certImg1
     },
     {
       id: 2,
-      title: "Top 10 Finalist - HackIT 2026",
-      organization: "Dev League",
-      description: "Recognized as a top 10 finalist among 500+ participants for developing a real-time collaborative workspace tool.",
-      date: "February 2026",
-      badge: "Finalist",
+      title: "Code Clash",
+      organization: "IIT Hyderabad (Elan & nVision)",
+      description: "Participated in a premier competitive programming competition, solving complex algorithmic and logical problems under strict time constraints.",
+      date: "January 2026",
+      badge: "Participant",
       link: cert2,
       icon: <FaMedal />,
       image: certImg2

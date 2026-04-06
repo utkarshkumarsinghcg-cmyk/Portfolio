@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Projects.css';
 import Reveal from './Reveal';
 import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop } from 'react-icons/fa';
+import oceanImg from '../assets/image 46.png';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -14,7 +15,8 @@ const Projects = () => {
       tags: ["React", "Animations", "Frontend"],
       link: "https://frontend-odyssey-8c6v.vercel.app/",
       category: "Webpages",
-      icon: <FaLaptop />
+      icon: <FaLaptop />,
+      image: oceanImg
     },
     {
       id: 4,
@@ -104,6 +106,12 @@ const Projects = () => {
           <div key={project.id} className="project-card modern-card">
             
             <div className="card-top-decoration"></div>
+
+            {project.image && (
+              <div className="project-image-container">
+                <img src={project.image} alt={project.title} className="project-thumb" />
+              </div>
+            )}
             
             <div className="card-content">
               <div className="card-header">
