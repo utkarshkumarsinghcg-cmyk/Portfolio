@@ -3,6 +3,10 @@ import './Projects.css';
 import Reveal from './Reveal';
 import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop } from 'react-icons/fa';
 import oceanImg from '../assets/image 46.png';
+import formeImg from '../assets/image 47.png';
+import cinnamonImg from '../assets/image 48.png';
+import magicImg from '../assets/image 49.png';
+import clockImg from '../assets/image 50.png';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -26,7 +30,8 @@ const Projects = () => {
       link: "https://frome.netlify.app/",
       videoLink: "https://youtu.be/YicDrCGcrw4?si=WJygjlAix0Ow9vtq",
       category: "Webpages",
-      icon: <FaDesktop />
+      icon: <FaDesktop />,
+      image: formeImg
     },
     {
       id: 5,
@@ -36,7 +41,8 @@ const Projects = () => {
       link: "https://cinnamonkitchen-clone.netlify.app/",
       videoLink: "https://youtu.be/i_h8CI5B6Nc?si=rC1ERdR1VYUvMmXH",
       category: "Webpages",
-      icon: <FaStore />
+      icon: <FaStore />,
+      image: cinnamonImg
     },
     {
       id: 8,
@@ -46,7 +52,8 @@ const Projects = () => {
       link: "https://magickbrick-clone.netlify.app/",
       videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
       category: "Webpages",
-      icon: <FaBuilding />
+      icon: <FaBuilding />,
+      image: magicImg
     },
     {
       id: 7,
@@ -55,7 +62,8 @@ const Projects = () => {
       tags: ["React"],
       link: "https://clock-timer-project.vercel.app/",
       category: "Webpages",
-      icon: <FaClock />
+      icon: <FaClock />,
+      image: clockImg
     },
     {
       id: 9,
