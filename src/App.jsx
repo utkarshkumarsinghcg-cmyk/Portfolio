@@ -14,6 +14,8 @@ import ScrollSphere from './components/ScrollSphere';
 import Reveal from './components/Reveal';
 import LeetCodeStats from './components/LeetCodeStats';
 
+import Certificates from './components/Certificates';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,6 +34,7 @@ function App() {
             <Reveal><LeetCodeStats /></Reveal>
             <Reveal><Services /></Reveal>
             <Reveal><Projects /></Reveal>
+            <Reveal><Certificates /></Reveal>
             <Reveal><Education /></Reveal>
             <Reveal><Contact /></Reveal>
           </main>

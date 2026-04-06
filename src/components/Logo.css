@@ -1,0 +1,122 @@
+.uk-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.uk-logo-container:hover {
+  transform: scale(1.05);
+}
+
+.uk-logo {
+  font-family: var(--font-main);
+  font-size: 2.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.uk-letter {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback */
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.u-letter {
+  transform: translateY(0);
+}
+
+.k-letter {
+  transform: translateY(6px); /* Slightly misaligned for geometric feel */
+  margin-left: -5px; /* Tighter spacing */
+}
+
+/* Neon dot */
+.uk-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-pink);
+  border-radius: 50%;
+  margin-left: 2px;
+  margin-bottom: 7px;
+  box-shadow: 0 0 10px var(--color-pink);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  z-index: 2;
+}
+
+/* Intersecting shapes / lines for 3D premium geometric feel */
+.uk-logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: -5px;
+  width: calc(100% + 15px);
+  height: 3px;
+  background: var(--gradient-main);
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+  z-index: 1;
+}
+
+/* Hover effects */
+.uk-logo-container:hover .u-letter {
+  transform: translateY(-4px);
+}
+
+.uk-logo-container:hover .k-letter {
+  transform: translateY(0);
+}
+
+.uk-logo-container:hover .uk-dot {
+  transform: scale(1.5);
+  box-shadow: 0 0 15px var(--color-pink), 0 0 30px var(--color-accent);
+  background: var(--color-accent);
+}
+
+.uk-logo-container:hover .uk-logo::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  box-shadow: 0 0 15px var(--color-accent-glow);
+}
+
+/* 3D Glassmorphism glowing backdrop */
+.uk-logo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 140%;
+  height: 140%;
+  background: var(--color-accent-glow);
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.uk-logo-container:hover .uk-logo::before {
+  opacity: 0.4;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Light Theme Overrides */
+[data-theme='light'] .uk-logo::before {
+  background: rgba(239, 68, 68, 0.15); /* Soft red glow for light mode */
+}

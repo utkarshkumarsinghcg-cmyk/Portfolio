@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import './Header.css';
+import Logo from './Logo';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -34,12 +35,8 @@ const Header = () => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <a href="#" className="logo-split" aria-label="UKS Logo">
-          <div className="logo-wrapper">
-            <span className="logo-text">UKS</span>
-            <div className="logo-slice"></div>
-            <div className="logo-glow"></div>
-          </div>
+        <a href="#" className="logo-link" aria-label="UKS Logo">
+          <Logo />
         </a>
 
         <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
@@ -54,6 +51,7 @@ const Header = () => {
             <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
             <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
             <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+            <li><a href="#certificates" onClick={() => setMenuOpen(false)}>Certificates</a></li>
             <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
             <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
             <li>
