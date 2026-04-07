@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './Projects.css';
 import Reveal from './Reveal';
 import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop } from 'react-icons/fa';
-import oceanImg from '../assets/image 46.png';
-import formeImg from '../assets/image 47.png';
-import cinnamonImg from '../assets/image 48.png';
-import magicImg from '../assets/image 49.png';
-import clockImg from '../assets/image 50.png';
+import frontendOdeacy from '../assets/frontendOdeacy.png';
+import Forme from '../assets/Forme.png';
+import CinnamonKitchen from '../assets/CinnamonKitchen.png';
+import MagicBrick from '../assets/MagicBrick.png';
+import Clock from '../assets/Clock.png';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('All');
@@ -20,7 +20,7 @@ const Projects = () => {
       link: "https://frontend-odyssey-8c6v.vercel.app/",
       category: "Webpages",
       icon: <FaLaptop />,
-      image: oceanImg
+      image: frontendOdeacy
     },
     {
       id: 4,
@@ -31,7 +31,7 @@ const Projects = () => {
       videoLink: "https://youtu.be/YicDrCGcrw4?si=WJygjlAix0Ow9vtq",
       category: "Webpages",
       icon: <FaDesktop />,
-      image: formeImg
+      image: Forme
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ const Projects = () => {
       videoLink: "https://youtu.be/i_h8CI5B6Nc?si=rC1ERdR1VYUvMmXH",
       category: "Webpages",
       icon: <FaStore />,
-      image: cinnamonImg
+      image: CinnamonKitchen
     },
     {
       id: 8,
@@ -53,7 +53,7 @@ const Projects = () => {
       videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
       category: "Webpages",
       icon: <FaBuilding />,
-      image: magicImg
+      image: MagicBrick
     },
     {
       id: 7,
@@ -63,7 +63,7 @@ const Projects = () => {
       link: "https://clock-timer-project.vercel.app/",
       category: "Webpages",
       icon: <FaClock />,
-      image: clockImg
+      image: Clock
     },
     {
       id: 9,
@@ -113,13 +113,15 @@ const Projects = () => {
         {filteredProjects.map((project) => (
           <div key={project.id} className="project-card modern-card">
             
-            <div className="card-top-decoration"></div>
-
-            {project.image && (
-              <div className="project-image-container">
-                <img src={project.image} alt={project.title} className="project-thumb" />
-              </div>
-            )}
+            <div className="card-image-wrapper">
+              {project.image ? (
+                <img src={project.image} alt={project.title} className="project-image" />
+              ) : (
+                <div className="project-image-placeholder">
+                  {project.icon}
+                </div>
+              )}
+            </div>
             
             <div className="card-content">
               <div className="card-header">
