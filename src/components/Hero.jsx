@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import { FaReact, FaNodeJs, FaJs, FaDatabase, FaDownload } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -60,7 +61,12 @@ const Hero = () => {
         </p>
 
         <div className="cta-group">
-          <a href="#projects" className="btn btn-primary">View My Work</a>
+          <Link to="/#projects" onClick={(e) => {
+            if (window.location.pathname === '/') {
+              e.preventDefault();
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }
+          }} className="btn btn-primary">View My Work</Link>
           <a
             href="https://drive.google.com/file/d/1gd8rC9jqg39QoFbZ4-nqfzD5FLbz1xXP/view?usp=sharing"
             target="_blank"

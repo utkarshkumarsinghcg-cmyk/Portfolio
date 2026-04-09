@@ -6,23 +6,18 @@ import { certificateList } from '../data';
 import { FaExternalLinkAlt, FaCalendarAlt } from 'react-icons/fa';
 
 const Certificates = () => {
-  const displayedCertificates = certificateList.slice(0, 3);
+  const displayedCertificates = certificateList.slice(0, 2);
 
   return (
     <section id="certificates" className="certificates">
-      <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end' }}>
+      <div className="section-header">
         <Reveal>
-          <div style={{ textAlign: 'left' }}>
-            <h2>Hackathon Achievements</h2>
-            <p>Recognition and certificates from various tech competitions and hackathons.</p>
-          </div>
+          <h2>Hackathon Achievements</h2>
+          <p>Recognition and certificates from various tech competitions and hackathons.</p>
         </Reveal>
-        <Link to="/certificates" className="btn-modern outline-btn" style={{ fontSize: '0.9rem', padding: '0.4rem 1rem' }}>
-          See More &rarr;
-        </Link>
       </div>
 
-      <div className="certificates-grid">
+      <div className="certificates-grid home-grid">
         {displayedCertificates.map((cert, index) => (
           <Reveal key={cert.id} delay={index * 0.1}>
             <div className="certificate-card modern-card">
@@ -54,6 +49,15 @@ const Certificates = () => {
             </div>
           </Reveal>
         ))}
+        {certificateList.length > 2 && (
+          <Reveal delay={displayedCertificates.length * 0.1}>
+            <div className="certificate-card modern-card see-more-card">
+              <Link to="/certificates" className="see-more-circle-link" title="See all certificates">
+                <span className="arrow-icon">&rarr;</span>
+              </Link>
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );

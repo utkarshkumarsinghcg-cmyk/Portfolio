@@ -2,24 +2,20 @@ import React, { useState } from 'react';
 import './Projects.css';
 import Reveal from './Reveal';
 import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import { projectList } from '../data';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('Webpages');
 
   const filteredProjects = projectList.filter(project => project.category === activeTab);
-  const displayedProjects = filteredProjects.slice(0, 3);
+  const displayedProjects = filteredProjects.slice(0, 2);
 
   return (
     <section id="projects" className="projects">
-      <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end' }}>
-        <div>
-          <h2>Featured Projects</h2>
-          <p>A selection of my recent work.</p>
-        </div>
-        <Link to="/projects" className="btn-modern outline-btn" style={{ fontSize: '0.9rem', padding: '0.4rem 1rem' }}>
-          See More &rarr;
-        </Link>
+      <div className="section-header">
+        <h2>Featured Projects</h2>
+        <p>A selection of my recent work.</p>
       </div>
 
       {/* Category Tabs */}
@@ -35,7 +31,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <Reveal className="projects-grid reveal-stagger">
+      <Reveal className="projects-grid home-grid reveal-stagger">
         {displayedProjects.map((project) => (
           <div key={project.id} className="project-card modern-card">
             
@@ -85,6 +81,13 @@ const Projects = () => {
             </div>
           </div>
         ))}
+        {filteredProjects.length > 2 && (
+          <div className="project-card modern-card see-more-card">
+            <Link to="/projects" className="see-more-circle-link" title="See all projects">
+              <span className="arrow-icon">&rarr;</span>
+            </Link>
+          </div>
+        )}
       </Reveal>
     </section>
   );

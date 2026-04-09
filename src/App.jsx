@@ -9,18 +9,26 @@ import AllProjects from './pages/AllProjects';
 import AllCertificates from './pages/AllCertificates';
 
 const ScrollToAnchor = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace('#', ''));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      let retries = 0;
+      const scrollIfFound = () => {
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        } else if (retries < 10) {
+          retries++;
+          setTimeout(scrollIfFound, 400);
+        }
+      };
+      // Short delay helps ensure react router has properly unmounted/mounted routes
+      setTimeout(scrollIfFound, 100);
     } else {
       window.scrollTo(0, 0);
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return null;
 };

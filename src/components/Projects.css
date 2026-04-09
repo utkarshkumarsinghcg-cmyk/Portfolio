@@ -286,3 +286,79 @@
   box-shadow: 0 6px 18px rgba(36, 211, 102, 0.2);
   transform: translateY(-2px) scale(1.08);
 }
+
+/* See More Compact Circular Card */
+.see-more-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns strictly left within its grid cell to sit neatly next to the cards */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  min-height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.see-more-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 1;
+}
+
+.see-more-circle-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: #ff6b6b;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.1);
+}
+
+.see-more-circle-link:hover {
+  background: var(--gradient-main);
+  border-color: transparent;
+  color: white;
+  transform: translateX(8px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+.see-more-circle-link .arrow-icon {
+  font-size: 1.8rem;
+  font-weight: 300;
+  transition: transform 0.4s ease;
+}
+
+.see-more-circle-link:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Home Grid Layout - strictly 2 cards + tiny side element on desktop */
+.home-grid {
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .see-more-card {
+    justify-content: center !important;
+    margin-top: 1rem;
+  }
+  
+  .see-more-circle-link {
+    width: 60px;
+    height: 60px;
+  }
+}
