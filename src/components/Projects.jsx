@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Projects.css';
 import Reveal from './Reveal';
-import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop } from 'react-icons/fa';
+import { FaLaptop, FaStore, FaBuilding, FaClock, FaGamepad, FaChartBar, FaDesktop, FaGithub } from 'react-icons/fa';
 import frontendOdeacy from '../assets/frontendOdeacy.png';
 import Forme from '../assets/Forme.png';
 import CinnamonKitchen from '../assets/CinnamonKitchen.png';
@@ -18,6 +18,8 @@ const Projects = () => {
       description: "A fully frontend interactive project developed for the Frontend Odyssey Hackathon. Built with React, featuring rich animations and an immersive UI/UX.",
       tags: ["React", "Animations", "Frontend"],
       link: "https://frontend-odyssey-8c6v.vercel.app/",
+      videoLink: "https://youtu.be/hfGGrY0ZCOI?si=wvgJLxupQeqVSbG9",
+      github: "https://github.com/utkarshkumarsinghcg-cmyk/Frontend-Odyssey",
       category: "Webpages",
       icon: <FaLaptop />,
       image: frontendOdeacy
@@ -29,6 +31,7 @@ const Projects = () => {
       tags: ["HTML", "CSS"],
       link: "https://frome.netlify.app/",
       videoLink: "https://youtu.be/YicDrCGcrw4?si=WJygjlAix0Ow9vtq",
+      github: "https://github.com/utkarshkumarsinghcg-cmyk/FORME_CLONE",
       category: "Webpages",
       icon: <FaDesktop />,
       image: Forme
@@ -40,6 +43,7 @@ const Projects = () => {
       tags: ["HTML", "CSS"],
       link: "https://cinnamonkitchen-clone.netlify.app/",
       videoLink: "https://youtu.be/i_h8CI5B6Nc?si=rC1ERdR1VYUvMmXH",
+      github: "https://github.com/utkarshkumarsinghcg-cmyk/CINNAMON_KITCHEN-CLONE",
       category: "Webpages",
       icon: <FaStore />,
       image: CinnamonKitchen
@@ -51,6 +55,7 @@ const Projects = () => {
       tags: ["HTML", "CSS"],
       link: "https://magickbrick-clone.netlify.app/",
       videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
+      github: "https://github.com/utkarshkumarsinghcg-cmyk/MAGIC_BRICK_CLONE",
       category: "Webpages",
       icon: <FaBuilding />,
       image: MagicBrick
@@ -61,6 +66,8 @@ const Projects = () => {
       description: "This is a study clock that helps you to study for a certain amount of time and take breaks in between. Includes timer and to-do list.",
       tags: ["React"],
       link: "https://clock-timer-project.vercel.app/",
+      videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
+      github: "https://github.com/utkarshkumarsingh",
       category: "Webpages",
       icon: <FaClock />,
       image: Clock
@@ -71,6 +78,7 @@ const Projects = () => {
       description: "A fully functional interactive Tic-Tac-Toe game built with modern web technologies and logic.",
       tags: ["React", "JavaScript"],
       link: "#",
+      github: "https://github.com/utkarshkumarsingh",
       category: "Game",
       icon: <FaGamepad />
     },
@@ -80,6 +88,7 @@ const Projects = () => {
       description: "A massive full-stack inventory management system actively in development with live data tracking.",
       tags: ["React", "Node.js", "MongoDB"],
       link: "#",
+      github: "https://github.com/utkarshkumarsingh",
       category: "Ongoing",
       icon: <FaChartBar />
     }
@@ -142,6 +151,17 @@ const Projects = () => {
                 {project.videoLink && (
                   <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer">
                     <span className="play-icon">▶</span> Demo
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    className="btn-modern github-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="View on GitHub"
+                  >
+                    <FaGithub />
                   </a>
                 )}
               </div>

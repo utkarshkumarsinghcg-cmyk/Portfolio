@@ -267,3 +267,22 @@
   from { transform: scale(1); }
   to { transform: scale(1.2); }
 }
+
+/* GitHub Button */
+.github-btn {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 0.75rem;
+  font-size: 1.05rem;
+  margin-left: auto;
+  border-radius: 8px;
+}
+
+.github-btn:hover {
+  background: rgba(36, 211, 102, 0.12);
+  color: #24d366;
+  border-color: rgba(36, 211, 102, 0.4);
+  box-shadow: 0 6px 18px rgba(36, 211, 102, 0.2);
+  transform: translateY(-2px) scale(1.08);
+}

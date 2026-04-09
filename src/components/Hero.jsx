@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import { FaGithub, FaLinkedinIn, FaReact, FaNodeJs, FaJs, FaDatabase, FaTwitter, FaDownload, FaYoutube } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiLeetcode } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaJs, FaDatabase, FaDownload } from 'react-icons/fa';
+import { SiTailwindcss, SiMongodb } from 'react-icons/si';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -74,23 +74,15 @@ const Hero = () => {
             <span className="resume-btn-glow"></span>
           </a>
 
-          <div className="social-links">
-            <a href="https://www.linkedin.com/in/utkarsh-kumar-singh-28ba04378/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="https://github.com/utkarshkumarsinghcg-cmyk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-            <a href="https://x.com/UtkarshSin78788" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-            <a href="https://www.youtube.com/@UtkarshsBuilds" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
-            <a href="https://leetcode.com/u/utkarshkumarsingh/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><SiLeetcode /></a>
-          </div>
-        </div>
-
-        <div className="tech-stack-preview">
-          <p>Tech Stack:</p>
-          <div className="tech-icons">
-            <FaReact title="React" />
-            <FaNodeJs title="Node.js" />
-            <FaJs title="JavaScript" />
-            <SiTailwindcss title="Tailwind CSS" />
-            <SiMongodb title="MongoDB" />
+          <div className="tech-stack-inline">
+            <span className="tech-stack-label">Stack:</span>
+            <div className="tech-icons">
+              <FaReact title="React" />
+              <FaNodeJs title="Node.js" />
+              <FaJs title="JavaScript" />
+              <SiTailwindcss title="Tailwind CSS" />
+              <SiMongodb title="MongoDB" />
+            </div>
           </div>
         </div>
       </div>
