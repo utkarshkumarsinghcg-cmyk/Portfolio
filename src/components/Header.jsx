@@ -1,28 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
 import './Header.css';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // Theme state
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
-
-  // Theme toggle side effect
-  useEffect(() => {
-    if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +18,9 @@ const Header = () => {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <a href="#" className="logo-link" aria-label="UKS Logo">
+        <Link to="/#hero" className="logo-link" aria-label="UKS Logo">
           <Logo />
-        </a>
+        </Link>
 
         <div className={`nav-toggle ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
           <div className="bar"></div>
@@ -47,18 +30,13 @@ const Header = () => {
 
         <nav className={`nav-menu ${menuOpen ? 'active' : ''}`}>
           <ul>
-            <li><a href="#hero" onClick={() => setMenuOpen(false)}>Home</a></li>
-            <li><a href="#about" onClick={() => setMenuOpen(false)}>About</a></li>
-            <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
-            <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
-            <li><a href="#certificates" onClick={() => setMenuOpen(false)}>Certificates</a></li>
-            <li><a href="#education" onClick={() => setMenuOpen(false)}>Education</a></li>
-            <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
-            <li>
-              <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
-                {theme === 'light' ? <FaMoon /> : <FaSun />}
-              </button>
-            </li>
+            <li><Link to="/#hero" onClick={() => setMenuOpen(false)}>Home</Link></li>
+            <li><Link to="/#about" onClick={() => setMenuOpen(false)}>About</Link></li>
+            <li><Link to="/#skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
+            <li><Link to="/#projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
+            <li><Link to="/#certificates" onClick={() => setMenuOpen(false)}>Certificates</Link></li>
+            <li><Link to="/#education" onClick={() => setMenuOpen(false)}>Education</Link></li>
+            <li><Link to="/#contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
             <li>
               <a
                 href="/resume.pdf"

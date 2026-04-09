@@ -1,23 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Loader from './components/Loader';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Services from './components/Services';
-import Education from './components/Education';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ScrollSphere from './components/ScrollSphere';
-import Reveal from './components/Reveal';
-import LeetCodeStats from './components/LeetCodeStats';
+import Home from './pages/Home';
+import AllProjects from './pages/AllProjects';
+import AllCertificates from './pages/AllCertificates';
 
-import Certificates from './components/Certificates';
+const ScrollToAnchor = () => {
+  const { hash } = useLocation();
 
-function App() {
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [hash]);
+
+  return null;
+};
+
+const AppContent = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="App">
@@ -25,23 +39,25 @@ function App() {
         <Loader onLoadingComplete={() => setIsLoading(false)} />
       ) : (
         <>
-          <ScrollSphere />
           <Header />
-          <main>
-            <Reveal><Hero /></Reveal>
-            <Reveal><About /></Reveal>
-            <Reveal><Skills /></Reveal>
-            <Reveal><LeetCodeStats /></Reveal>
-            <Reveal><Services /></Reveal>
-            <Reveal><Projects /></Reveal>
-            <Reveal><Certificates /></Reveal>
-            <Reveal><Education /></Reveal>
-            <Reveal><Contact /></Reveal>
-          </main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<AllProjects />} />
+              <Route path="/certificates" element={<AllCertificates />} />
+            </Routes>
           <Footer />
         </>
       )}
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <ScrollToAnchor />
+      <AppContent />
+    </Router>
   );
 }
 

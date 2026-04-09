@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import { FaLinkedinIn, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -16,8 +17,8 @@ const Footer = () => {
         </div>
         <p>&copy; {new Date().getFullYear()} Utkarsh Kumar Singh. All rights reserved.</p>
         <div className="footer-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <Link to="#">Privacy Policy</Link>
+          <Link to="#">Terms of Service</Link>
         </div>
       </div>
     </footer>

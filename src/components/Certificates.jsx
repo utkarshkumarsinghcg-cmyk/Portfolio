@@ -1,49 +1,29 @@
 import React from 'react';
 import './Certificates.css';
 import Reveal from './Reveal';
-import { FaCertificate, FaMedal, FaExternalLinkAlt, FaCalendarAlt, FaTrophy } from 'react-icons/fa';
-import cert1 from '../assets/Certificate1.pdf';
-import cert2 from '../assets/Certificate2.pdf';
-import certImg1 from '../assets/C1.png';
-import certImg2 from '../assets/C2.png';
+import { Link } from 'react-router-dom';
+import { certificateList } from '../data';
+import { FaExternalLinkAlt, FaCalendarAlt } from 'react-icons/fa';
 
 const Certificates = () => {
-  const certificateList = [
-    {
-      id: 1,
-      title: "AI - WebForge",
-      organization: "Amity School of Engineering & Technology, Noida",
-      description: "Participated in a fast-paced challenge to design and develop a stunning portfolio website within 36 hours, showcasing technical expertise and creative design.",
-      date: "April 2026",
-      badge: "Participant",
-      link: cert1,
-      icon: <FaTrophy />,
-      image: certImg1
-    },
-    {
-      id: 2,
-      title: "Code Clash",
-      organization: "IIT Hyderabad (Elan & nVision)",
-      description: "Participated in a premier competitive programming competition, solving complex algorithmic and logical problems under strict time constraints.",
-      date: "January 2026",
-      badge: "Participant",
-      link: cert2,
-      icon: <FaMedal />,
-      image: certImg2
-    }
-  ];
+  const displayedCertificates = certificateList.slice(0, 3);
 
   return (
     <section id="certificates" className="certificates">
-      <div className="section-header">
+      <div className="section-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end' }}>
         <Reveal>
-          <h2>Hackathon Achievements</h2>
-          <p>Recognition and certificates from various tech competitions and hackathons.</p>
+          <div style={{ textAlign: 'left' }}>
+            <h2>Hackathon Achievements</h2>
+            <p>Recognition and certificates from various tech competitions and hackathons.</p>
+          </div>
         </Reveal>
+        <Link to="/certificates" className="btn-modern outline-btn" style={{ fontSize: '0.9rem', padding: '0.4rem 1rem' }}>
+          See More &rarr;
+        </Link>
       </div>
 
       <div className="certificates-grid">
-        {certificateList.map((cert, index) => (
+        {displayedCertificates.map((cert, index) => (
           <Reveal key={cert.id} delay={index * 0.1}>
             <div className="certificate-card modern-card">
               <div className="cert-image-container">
