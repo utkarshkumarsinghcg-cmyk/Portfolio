@@ -23,8 +23,8 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 /* Tab Buttons Styling */
@@ -38,7 +38,7 @@
 
 .tab-btn {
   background: rgba(255, 255, 255, 0.05);
-  /* Match soft glass */
+/* Match soft glass */
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--color-text-muted);
   padding: 0.6rem 1.5rem;
@@ -61,7 +61,7 @@
   color: white;
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-  /* Match warm accent glow */
+/* Match warm accent glow */
   transform: translateY(-2px);
 }
 
@@ -134,7 +134,7 @@
 }
 
 .card-content {
-  padding: 2.5rem 2rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -292,6 +292,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Aligns strictly left within its grid cell to sit neatly next to the cards */
+  align-self: center; /* prevents vertical stretching */
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
@@ -343,7 +344,7 @@
 /* Home Grid Layout - strictly 2 cards + tiny side element on desktop */
 .home-grid {
   grid-template-columns: 1fr 1fr auto;
-  align-items: center;
+  align-items: stretch;
 }
 
 @media (max-width: 900px) {
@@ -354,6 +355,7 @@
   
   .see-more-card {
     justify-content: center !important;
+    align-self: center; /* Center horizontally out of grid */
     margin-top: 1rem;
   }
   
