@@ -9,7 +9,8 @@ import MagicBrick from '../assets/MagicBrick.png';
 import Clock from '../assets/Clock.png';
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState('All');
+  const [activeTab, setActiveTab] = useState('Webpages');
+  const [showAll, setShowAll] = useState(false);
 
   const projectList = [
     {
@@ -94,9 +95,8 @@ const Projects = () => {
     }
   ];
 
-  const filteredProjects = activeTab === 'All'
-    ? projectList
-    : projectList.filter(project => project.category === activeTab);
+  const filteredProjects = projectList.filter(project => project.category === activeTab);
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   return (
     <section id="projects" className="projects">
@@ -107,11 +107,16 @@ const Projects = () => {
 
       {/* Category Tabs */}
       <div className="project-tabs">
-        {['All', 'Webpages', 'Game', 'Ongoing'].map(tab => (
+        {['Webpages', 'Game', 'Ongoing'].map(tab => (
           <button
             key={tab}
             className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => setActiveTab(tab)}
+            onClick={() => {
+              if (activeTab !== tab) {
+                setActiveTab(tab);
+                setShowAll(false);
+              }
+            }}
           >
             {tab}
           </button>
@@ -119,7 +124,7 @@ const Projects = () => {
       </div>
 
       <Reveal className="projects-grid reveal-stagger">
-        {filteredProjects.map((project) => (
+        {displayedProjects.map((project) => (
           <div key={project.id} className="project-card modern-card">
             
             <div className="card-image-wrapper">
@@ -169,6 +174,17 @@ const Projects = () => {
           </div>
         ))}
       </Reveal>
+
+      {filteredProjects.length > 3 && (
+        <div className="see-more-container" style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <button 
+            className="btn-modern filled-btn" 
+            onClick={() => setShowAll(!showAll)}
+          >
+            {showAll ? 'See Less' : 'See More'}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
