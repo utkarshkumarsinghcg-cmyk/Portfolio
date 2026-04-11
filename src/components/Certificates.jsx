@@ -59,6 +59,12 @@ const Certificates = () => {
           </Reveal>
         )}
       </div>
+      
+      <div className="section-footer">
+        <Link to="/certificates" className="btn btn-primary see-more-main-btn">
+          See All Achievements <span className="arrow-icon">&rarr;</span>
+        </Link>
+      </div>
     </section>
   );
 };

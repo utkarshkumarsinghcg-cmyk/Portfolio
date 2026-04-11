@@ -31,7 +31,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <Reveal className="projects-grid reveal-stagger">
+      <Reveal className="projects-grid home-grid reveal-stagger">
         {displayedProjects.map((project) => (
           <div key={project.id} className="project-card modern-card">
             
@@ -61,10 +61,10 @@ const Projects = () => {
               
               <div className="card-actions">
                 <Link to={`/project/${project.id}`} className="btn-modern detail-btn">Details</Link>
-                <a href={project.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">Live Site</a>
+                <a href={project.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">View Site</a>
                 {project.videoLink && (
-                  <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer" title="View Demo">
-                    <span className="play-icon">▶</span>
+                  <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer">
+                    <span className="play-icon">▶</span> Demo
                   </a>
                 )}
                 {project.github && (
@@ -73,7 +73,7 @@ const Projects = () => {
                     className="btn-modern github-btn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="View Source"
+                    title="View on GitHub"
                   >
                     <FaGithub />
                   </a>
@@ -83,14 +83,17 @@ const Projects = () => {
           </div>
         ))}
         {filteredProjects.length > 2 && (
-          <div className="see-more-card">
+          <div className="project-card modern-card see-more-card">
             <Link to="/projects" className="see-more-circle-link" title="See all projects">
               <span className="arrow-icon">&rarr;</span>
-              <span>More</span>
             </Link>
           </div>
         )}
-      </Reveal>
+      <div className="section-footer">
+        <Link to="/projects" className="btn btn-primary see-more-main-btn">
+          See All Projects <span className="arrow-icon">&rarr;</span>
+        </Link>
+      </div>
     </section>
   );
 };
