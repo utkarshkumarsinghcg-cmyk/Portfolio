@@ -89,6 +89,8 @@ const Projects = () => {
             </Link>
           </div>
         )}
+      </Reveal>
+      
       <div className="section-footer">
         <Link to="/projects" className="btn btn-primary see-more-main-btn">
           See All Projects <span className="arrow-icon">&rarr;</span>
