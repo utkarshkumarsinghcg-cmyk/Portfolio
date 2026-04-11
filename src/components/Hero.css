@@ -134,6 +134,12 @@
   max-width: 90%;
 }
 
+.highlight {
+  color: var(--color-accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* Buttons & Tech Stack Row */
 .cta-group {
   display: flex;

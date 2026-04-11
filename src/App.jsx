@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AllProjects from './pages/AllProjects';
 import AllCertificates from './pages/AllCertificates';
+import NotFound from './pages/NotFound';
+import LeetCodePage from './pages/LeetCodePage';
+import ProjectDetail from './pages/ProjectDetail';
 
 const ScrollToAnchor = () => {
   const { hash, pathname } = useLocation();
@@ -51,7 +54,10 @@ const AppContent = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<AllProjects />} />
+              <Route path="/project/:id" element={<ProjectDetail />} />
               <Route path="/certificates" element={<AllCertificates />} />
+              <Route path="/leetcode" element={<LeetCodePage />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           <Footer />
         </>

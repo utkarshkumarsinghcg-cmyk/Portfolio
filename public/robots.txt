@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Exclude sensitive or non-content paths
+Disallow: /api/
+Disallow: /user-dashboard/
+Disallow: /private/
+
+# Link to your sitemap
+Sitemap: https://portfolio-one-orcin-i5rod2hodr.vercel.app/sitemap.xml

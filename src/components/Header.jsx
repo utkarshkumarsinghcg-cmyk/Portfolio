@@ -48,6 +48,7 @@ const Header = () => {
             <li><Link to="/#skills" onClick={(e) => handleNavClick(e, '#skills')}>Skills</Link></li>
             <li><Link to="/#projects" onClick={(e) => handleNavClick(e, '#projects')}>Projects</Link></li>
             <li><Link to="/#certificates" onClick={(e) => handleNavClick(e, '#certificates')}>Certificates</Link></li>
+            <li><Link to="/leetcode">LeetCode</Link></li>
             <li><Link to="/#education" onClick={(e) => handleNavClick(e, '#education')}>Education</Link></li>
             <li><Link to="/#contact" onClick={(e) => handleNavClick(e, '#contact')}>Contact</Link></li>
             <li>

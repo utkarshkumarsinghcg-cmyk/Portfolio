@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../components/Certificates.css';
 import Reveal from '../components/Reveal';
 import { certificateList } from '../data';
@@ -12,6 +13,9 @@ const AllCertificates = () => {
   return (
     <div className="page-container" style={{ padding: '120px 20px', minHeight: '100vh', background: '#0d0d0d' }}>
       <section className="certificates" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        <Link to="/" style={{ color: '#00d2ff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+          &larr; Back to Home
+        </Link>
         <div className="section-header" style={{ marginBottom: '4rem' }}>
           <h2>All Certificates & Achievements</h2>
           <p>A comprehensive view of my hackathon participation and certifications.</p>

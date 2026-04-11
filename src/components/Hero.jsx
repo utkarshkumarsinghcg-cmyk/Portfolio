@@ -55,9 +55,9 @@ const Hero = () => {
         </h2>
 
         <p className="description">
-          Transforming complex problems into elegant, scalable web solutions.
-          Specializing in building modern, responsive, and user-centric applications
-          that drive results.
+          A passionate Full-Stack Developer specializing in building scalable web applications
+          with <span className="highlight">MongoDB</span>, <span className="highlight">Express</span>, <span className="highlight">React</span>, and <span className="highlight">Node.js</span>. 
+          I transform complex problems into elegant, user-centric solutions.
         </p>
 
         <div className="cta-group">

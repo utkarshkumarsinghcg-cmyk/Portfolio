@@ -31,7 +31,7 @@ const Projects = () => {
         ))}
       </div>
 
-      <Reveal className="projects-grid home-grid reveal-stagger">
+      <Reveal className="projects-grid reveal-stagger">
         {displayedProjects.map((project) => (
           <div key={project.id} className="project-card modern-card">
             
@@ -60,10 +60,11 @@ const Projects = () => {
               </div>
               
               <div className="card-actions">
-                <a href={project.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">View Site</a>
+                <Link to={`/project/${project.id}`} className="btn-modern detail-btn">Details</Link>
+                <a href={project.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">Live Site</a>
                 {project.videoLink && (
-                  <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer">
-                    <span className="play-icon">▶</span> Demo
+                  <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer" title="View Demo">
+                    <span className="play-icon">▶</span>
                   </a>
                 )}
                 {project.github && (
@@ -72,7 +73,7 @@ const Projects = () => {
                     className="btn-modern github-btn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="View on GitHub"
+                    title="View Source"
                   >
                     <FaGithub />
                   </a>
@@ -82,9 +83,10 @@ const Projects = () => {
           </div>
         ))}
         {filteredProjects.length > 2 && (
-          <div className="project-card modern-card see-more-card">
+          <div className="see-more-card">
             <Link to="/projects" className="see-more-circle-link" title="See all projects">
               <span className="arrow-icon">&rarr;</span>
+              <span>More</span>
             </Link>
           </div>
         )}
