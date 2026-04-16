@@ -8,8 +8,6 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Certificates from '../components/Certificates';
 import Hackathons from '../components/Hackathons';
-import Achievements from '../components/Achievements';
-import FigmaDesigns from '../components/FigmaDesigns';
 import ScrollSphere from '../components/ScrollSphere';
 import Reveal from '../components/Reveal';
 import LeetCodeStats from '../components/LeetCodeStats';
@@ -20,8 +18,6 @@ const sectionTitles = {
   skills: 'Skills | Utkarsh Kumar Singh',
   projects: 'Projects | Utkarsh Kumar Singh',
   hackathons: 'Hackathons | Utkarsh Kumar Singh',
-  achievements: 'Achievements | Utkarsh Kumar Singh',
-  figma: 'Figma Designs | Utkarsh Kumar Singh',
   certificates: 'Certificates | Utkarsh Kumar Singh',
   education: 'Education | Utkarsh Kumar Singh',
   contact: 'Contact | Utkarsh Kumar Singh',
@@ -63,9 +59,7 @@ const Home = () => {
         <Reveal><LeetCodeStats /></Reveal>
         <Reveal><Services /></Reveal>
         <Reveal><Projects /></Reveal>
-        <Reveal><FigmaDesigns /></Reveal>
         <Reveal><Hackathons /></Reveal>
-        <Reveal><Achievements /></Reveal>
         <Reveal><Certificates /></Reveal>
         <Reveal><Education /></Reveal>
         <Reveal><Contact /></Reveal>
