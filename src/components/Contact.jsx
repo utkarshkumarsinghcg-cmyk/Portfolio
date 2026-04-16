@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 import { FaLinkedinIn, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 const Contact = () => {
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    // Please replace these with your actual EmailJS IDs.
+    // Get them by signing up at https://www.emailjs.com/
+    emailjs.sendForm('service_0yjqixf', 'template_idne70w', form.current, '7LckNCnxd4JZRBZto')
+      .then((result) => {
+          console.log(result.text);
+          alert("Message sent successfully! I'll get back to you soon.");
+          e.target.reset(); // clear form
+          setIsSending(false);
+      }, (error) => {
+          console.log(error.text);
+          alert("Failed to send the message. Please try again.");
+          setIsSending(false);
+      });
+  };
   return (
     <section id="contact" className="contact">
       <div className="section-header">
@@ -43,17 +65,19 @@ const Contact = () => {
           </div>
         </div>
 
-        <form className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder="Your Name" required />
           </div>
           <div className="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input type="email" name="email" placeholder="Your Email" required />
           </div>
           <div className="form-group">
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
           </div>
-          <button type="submit" className="btn btn-primary">Send Message</button>
+          <button type="submit" className="btn btn-primary" disabled={isSending}>
+            {isSending ? 'Sending...' : 'Send Message'}
+          </button>
         </form>
       </div>
     </section>
