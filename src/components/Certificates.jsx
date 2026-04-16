@@ -10,6 +10,10 @@ const Certificates = () => {
 
   return (
     <section id="certificates" className="certificates">
+           <Helmet>
+                <title>Certificates</title>
+                <meta name='description' content='My-journey to become a developer ' />
+            </Helmet>
       <div className="section-header">
         <Reveal>
           <h2>Hackathon Achievements</h2>

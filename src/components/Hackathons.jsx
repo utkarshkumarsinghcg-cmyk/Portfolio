@@ -2,7 +2,7 @@ import React from 'react';
 import './Hackathons.css';
 import Reveal from './Reveal';
 import { hackathonList } from '../data';
-import { FaCalendarAlt, FaGithub } from 'react-icons/fa';
+import { FaCalendarAlt, FaGithub, FaExternalLinkAlt, FaTrophy } from 'react-icons/fa';
 
 const Hackathons = () => {
   return (
@@ -10,60 +10,69 @@ const Hackathons = () => {
       <div className="section-header">
         <Reveal>
           <h2>Hackathons</h2>
-          <p>Innovating and building under pressure at various hackathons.</p>
+          <p>Building under pressure — real problems, tight deadlines, and bold ideas.</p>
         </Reveal>
       </div>
 
-      <div className="hackathons-grid home-grid">
+      <div className="hackathons-timeline">
         {hackathonList.map((hackathon, index) => (
-          <Reveal key={hackathon.id} delay={index * 0.1}>
-            <div className="hackathon-card modern-card">
-              <div className="hackathon-image-container">
-                <img src={hackathon.image} alt={hackathon.hackathonName} className="hackathon-image" />
+          <Reveal key={hackathon.id} delay={index * 0.15}>
+            <div className="hackathon-entry">
+
+              {/* Timeline dot */}
+              <div className="hackathon-dot">
+                <FaTrophy />
               </div>
-              
-              <div className="hackathon-content">
-                <div className="hackathon-header">
-                  <div className="hackathon-icon-wrapper">
-                    {hackathon.icon}
+
+              {/* Spotlight Card */}
+              <div className="hackathon-spotlight">
+                <div className="hackathon-spotlight-inner">
+
+                  {/* Left: Image Panel */}
+                  <div className="hackathon-img-panel">
+                    {hackathon.image && (
+                      <img src={hackathon.image} alt={hackathon.hackathonName} />
+                    )}
+                    <span className="hack-badge">Hackathon</span>
                   </div>
-                  <h3 className="hackathon-title">{hackathon.hackathonName}</h3>
-                </div>
-                
-                <span className="hackathon-project-title">Project: {hackathon.projectTitle}</span>
-                
-                <div className="hackathon-problem">
-                   <strong>Problem Statement:</strong> {hackathon.problemStatement}
-                </div>
-                
-                <div className="hackathon-tags tags">
-                  {hackathon.tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
-                </div>
-                
-                <div className="hackathon-footer">
-                  <span className="hackathon-date">
-                    <FaCalendarAlt size={12} /> {hackathon.date}
-                  </span>
-                  <div className="hackathon-links">
-                     {hackathon.link && (
+
+                  {/* Right: Info Panel */}
+                  <div className="hackathon-info-panel">
+                    <div className="hack-top">
+                      <span className="hack-date-chip">
+                        <FaCalendarAlt size={11} /> {hackathon.date}
+                      </span>
+                      <h3 className="hackathon-name">{hackathon.hackathonName}</h3>
+                      <span className="hack-project-label">🚀 Project: {hackathon.projectTitle}</span>
+                    </div>
+
+                    <div className="hack-problem">
+                      <strong>Problem:</strong> {hackathon.problemStatement}
+                    </div>
+
+                    <div className="hack-tags">
+                      {hackathon.tags.map(tag => (
+                        <span key={tag} className="tag">{tag}</span>
+                      ))}
+                    </div>
+
+                    <div className="hack-actions">
+                      {hackathon.link && (
                         <a href={hackathon.link} className="btn-modern outline-btn" target="_blank" rel="noopener noreferrer">
-                          View Site
+                          <FaExternalLinkAlt size={12} /> View Site
                         </a>
                       )}
                       {hackathon.github && (
-                         <a
-                          href={hackathon.github}
-                          className="btn-modern github-btn"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          title="View on GitHub"
-                        >
+                        <a href={hackathon.github} className="btn-modern github-btn" target="_blank" rel="noopener noreferrer" title="GitHub">
                           <FaGithub />
                         </a>
                       )}
+                    </div>
                   </div>
+
                 </div>
               </div>
+
             </div>
           </Reveal>
         ))}
