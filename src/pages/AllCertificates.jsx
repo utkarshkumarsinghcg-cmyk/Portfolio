@@ -13,7 +13,7 @@ const AllCertificates = () => {
   return (
     <div className="page-container" style={{ padding: '120px 20px', minHeight: '100vh', background: '#0d0d0d' }}>
       <section className="certificates" style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <Link to="/" style={{ color: '#00d2ff', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+        <Link to="/" className="back-home-pill">
           &larr; Back to Home
         </Link>
         <div className="section-header" style={{ marginBottom: '4rem' }}>

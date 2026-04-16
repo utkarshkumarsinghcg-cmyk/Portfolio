@@ -82,13 +82,6 @@ const Projects = () => {
             </div>
           </div>
         ))}
-        {filteredProjects.length > 2 && (
-          <div className="project-card modern-card see-more-card">
-            <Link to="/projects" className="see-more-circle-link" title="See all projects">
-              <span className="arrow-icon">&rarr;</span>
-            </Link>
-          </div>
-        )}
       </Reveal>
       
       <div className="section-footer">

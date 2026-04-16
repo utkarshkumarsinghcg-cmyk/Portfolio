@@ -49,15 +49,6 @@ const Certificates = () => {
             </div>
           </Reveal>
         ))}
-        {certificateList.length > 2 && (
-          <Reveal delay={displayedCertificates.length * 0.1}>
-            <div className="certificate-card modern-card see-more-card">
-              <Link to="/certificates" className="see-more-circle-link" title="See all certificates">
-                <span className="arrow-icon">&rarr;</span>
-              </Link>
-            </div>
-          </Reveal>
-        )}
       </div>
       
       <div className="section-footer">

@@ -149,3 +149,25 @@ button {
 .reveal-stagger.is-visible>*:nth-child(5) {
   transition-delay: 0.5s;
 }
+
+.back-home-pill {
+  color: var(--color-purple);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  padding: 10px 24px;
+  background: rgba(252, 160, 72, 0.1);
+  border: 1px solid rgba(252, 160, 72, 0.3);
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.back-home-pill:hover {
+  background: var(--color-purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(252, 160, 72, 0.3);
+}

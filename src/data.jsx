@@ -9,20 +9,10 @@ import cert1 from './assets/Certificate1.pdf';
 import cert2 from './assets/Certificate2.pdf';
 import certImg1 from './assets/C1.png';
 import certImg2 from './assets/C2.png';
+import newCertImg from './assets/Screenshot 2026-04-16 170032.png';
+import cert3 from './assets/FrontendOdecy.pdf';
 
 export const projectList = [
-    {
-      id: 11,
-      title: "Frontend Odyssey Hackathon",
-      description: "A fully frontend interactive project developed for the Frontend Odyssey Hackathon. Built with React, featuring rich animations and an immersive UI/UX.",
-      tags: ["React", "Animations", "Frontend"],
-      link: "https://frontend-odyssey-8c6v.vercel.app/",
-      videoLink: "https://youtu.be/hfGGrY0ZCOI?si=wvgJLxupQeqVSbG9",
-      github: "https://github.com/utkarshkumarsinghcg-cmyk/Frontend-Odyssey",
-      category: "Webpages",
-      icon: <FaLaptop />,
-      image: frontendOdeacy
-    },
     {
       id: 4,
       title: "Forme-Clone",
@@ -99,6 +89,7 @@ export const certificateList = [
       title: "AI - WebForge",
       organization: "Amity School of Engineering & Technology, Noida",
       description: "Participated in a fast-paced challenge to design and develop a stunning portfolio website within 36 hours, showcasing technical expertise and creative design.",
+
       date: "April 2026",
       badge: "Participant",
       link: cert1,
@@ -115,5 +106,33 @@ export const certificateList = [
       link: cert2,
       icon: <FaMedal />,
       image: certImg2
+    },
+    {
+      id: 3,
+      title: "Frontend Odyssey",
+      organization: "Hackathon",
+      description: "Successfully built and presented an interactive project showcasing rich animations and UI/UX.",
+      date: "October 2023",
+      badge: "Participant",
+      link: "https://d8it4huxumps7.cloudfront.net/lambda-pdfs/certificate-images/fad434fd-844c-4f8f-8fbe-60167a47373d.pdf",
+      icon: <FaLaptop />,
+      image: newCertImg
+    }
+];
+
+export const hackathonList = [
+    {
+      id: 1,
+      hackathonName: "Frontend Odyssey Hackathon",
+      date: "January 2026",
+      projectTitle: "Frontend Odyssey",
+      problemStatement: "Create an interactive and immersive frontend web experience focusing on animations, UI/UX, and performance.",
+      description: "A fully frontend interactive project developed for the Frontend Odyssey Hackathon. Built with React, featuring rich animations and an immersive UI/UX.",
+      tags: ["React", "Animations", "Frontend"],
+      link: "https://frontend-odyssey-8c6v.vercel.app/",
+      videoLink: "https://youtu.be/hfGGrY0ZCOI?si=wvgJLxupQeqVSbG9",
+      github: "https://github.com/utkarshkumarsinghcg-cmyk/Frontend-Odyssey",
+      icon: <FaLaptop />,
+      image: frontendOdeacy
     }
 ];

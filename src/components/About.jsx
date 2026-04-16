@@ -1,9 +1,14 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './About.css';
 
 const About = () => {
     return (
         <section id="about" className="about">
+            <Helmet>
+                <title>About-Me</title>
+                <meta name='description' content='My-journey to become a developer ' />
+            </Helmet>
             <div className="about-inner">
 
                 <div className="about-header">

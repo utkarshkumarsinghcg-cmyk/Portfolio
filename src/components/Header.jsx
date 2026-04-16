@@ -47,6 +47,7 @@ const Header = () => {
             <li><Link to="/#about" onClick={(e) => handleNavClick(e, '#about')}>About</Link></li>
             <li><Link to="/#skills" onClick={(e) => handleNavClick(e, '#skills')}>Skills</Link></li>
             <li><Link to="/#projects" onClick={(e) => handleNavClick(e, '#projects')}>Projects</Link></li>
+            <li><Link to="/#hackathons" onClick={(e) => handleNavClick(e, '#hackathons')}>Hackathons</Link></li>
             <li><Link to="/#certificates" onClick={(e) => handleNavClick(e, '#certificates')}>Certificates</Link></li>
             <li><Link to="/leetcode">LeetCode</Link></li>
             <li><Link to="/#education" onClick={(e) => handleNavClick(e, '#education')}>Education</Link></li>
@@ -57,15 +58,7 @@ const Header = () => {
                 className="resume-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => {
-                  setMenuOpen(false);
-                  const link = document.createElement('a');
-                  link.href = '/resume.pdf';
-                  link.download = 'Utkarsh_Resume.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
+                onClick={() => setMenuOpen(false)}
               >
                 Resume
               </a>

@@ -68,7 +68,7 @@ const Hero = () => {
             }
           }} className="btn btn-primary">View My Work</Link>
           <a
-            href="https://drive.google.com/file/d/1gd8rC9jqg39QoFbZ4-nqfzD5FLbz1xXP/view?usp=sharing"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-resume"

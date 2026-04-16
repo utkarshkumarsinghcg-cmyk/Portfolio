@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #00d2ff;
+  color: var(--color-accent);
   text-decoration: none;
   font-weight: 500;
   margin-bottom: 40px;
@@ -22,7 +22,7 @@
 }
 
 .back-link:hover {
-  color: #3a7bd5;
+  color: var(--color-text);
 }
 
 .project-header {
@@ -31,7 +31,7 @@
 
 .project-icon {
   font-size: 3rem;
-  color: #00d2ff;
+  color: var(--color-accent);
   margin-bottom: 15px;
 }
 
@@ -71,7 +71,7 @@
 .project-info-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00d2ff;
+  color: var(--color-accent);
 }
 
 .description {
@@ -109,24 +109,8 @@
   transition: all 0.3s;
 }
 
-.filled-btn {
-  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  color: #fff;
-}
-
-.outline-btn {
-  border: 2px solid #3a7bd5;
-  color: #fff;
-}
-
-.video-btn {
-  background: #ff0000;
-  color: #fff;
-}
-
 .btn-modern:hover {
   transform: translateY(-3px);
-  filter: brightness(1.1);
 }
 
 @media (max-width: 992px) {
