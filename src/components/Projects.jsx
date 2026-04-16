@@ -7,7 +7,7 @@ import { FaGithub } from 'react-icons/fa';
 import { projectList } from '../data';
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState('Webpages');
+  const [activeTab, setActiveTab] = useState('Clones');
 
   const filteredProjects = projectList.filter(project => project.category === activeTab);
   const displayedProjects = filteredProjects.slice(0, 2);
@@ -16,12 +16,12 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="section-header">
         <h2>Featured Projects</h2>
-        <p>A selection of my recent work.</p>
+        <p>A selection of my recent work categorized for clarity.</p>
       </div>
 
       {/* Category Tabs */}
       <div className="project-tabs">
-        {['Webpages', 'Game', 'Ongoing'].map(tab => (
+        {['Clones', 'Games', 'Full Stack', 'Frontend'].map(tab => (
           <button
             key={tab}
             className={`tab-btn ${activeTab === tab ? 'active' : ''}`}
@@ -66,6 +66,11 @@ const Projects = () => {
                 {project.videoLink && (
                   <a href={project.videoLink} className="btn-modern filled-btn" target="_blank" rel="noopener noreferrer">
                     <span className="play-icon">▶</span> Demo
+                  </a>
+                )}
+                {project.postmanLink && (
+                  <a href={project.postmanLink} className="btn-modern postman-btn" target="_blank" rel="noopener noreferrer">
+                    <span className="api-icon">⚡</span> API Docs
                   </a>
                 )}
                 {project.github && (

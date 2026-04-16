@@ -11,6 +11,10 @@ import certImg1 from './assets/C1.png';
 import certImg2 from './assets/C2.png';
 import newCertImg from './assets/Screenshot 2026-04-16 170032.png';
 import cert3 from './assets/FrontendOdecy.pdf';
+import ClickCounter from './assets/ClickCounter.png';
+import FlipCard from './assets/FlipCard.png';
+import TicTacToe from './assets/TickTacToe.png';
+import TypingTestImg from './assets/TypingSpeedTest.png';
 
 export const projectList = [
     {
@@ -21,7 +25,7 @@ export const projectList = [
       link: "https://frome.netlify.app/",
       videoLink: "https://youtu.be/YicDrCGcrw4?si=WJygjlAix0Ow9vtq",
       github: "https://github.com/utkarshkumarsinghcg-cmyk/FORME_CLONE",
-      category: "Webpages",
+      category: "Clones",
       icon: <FaDesktop />,
       image: Forme
     },
@@ -33,7 +37,7 @@ export const projectList = [
       link: "https://cinnamonkitchen-clone.netlify.app/",
       videoLink: "https://youtu.be/i_h8CI5B6Nc?si=rC1ERdR1VYUvMmXH",
       github: "https://github.com/utkarshkumarsinghcg-cmyk/CINNAMON_KITCHEN-CLONE",
-      category: "Webpages",
+      category: "Clones",
       icon: <FaStore />,
       image: CinnamonKitchen
     },
@@ -45,7 +49,7 @@ export const projectList = [
       link: "https://magickbrick-clone.netlify.app/",
       videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
       github: "https://github.com/utkarshkumarsinghcg-cmyk/MAGIC_BRICK_CLONE",
-      category: "Webpages",
+      category: "Clones",
       icon: <FaBuilding />,
       image: MagicBrick
     },
@@ -57,7 +61,7 @@ export const projectList = [
       link: "https://clock-timer-project.vercel.app/",
       videoLink: "https://youtu.be/S58FhaNs9Xg?si=GyXdt6W1lj7AoSae",
       github: "https://github.com/utkarshkumarsingh",
-      category: "Webpages",
+      category: "Frontend",
       icon: <FaClock />,
       image: Clock
     },
@@ -66,10 +70,48 @@ export const projectList = [
       title: "Tic-Tac-Toe App",
       description: "A fully functional interactive Tic-Tac-Toe game built with modern web technologies and logic.",
       tags: ["React", "JavaScript"],
-      link: "#",
+      link: "https://tic-tac-toe-kohl-eight-70.vercel.app/",
+      videoLink: "#", // User needs to add
       github: "https://github.com/utkarshkumarsingh",
-      category: "Game",
-      icon: <FaGamepad />
+      category: "Games",
+      icon: <FaGamepad />,
+      image: TicTacToe
+    },
+    {
+      id: 11,
+      title: "Click Counter Game",
+      description: "An interactive game designed to test your clicking speed and reflexes with real-time feedback.",
+      tags: ["React", "JavaScript", "Tailwind"],
+      link: "https://click-counter-blue.vercel.app/",
+      videoLink: "#", // User needs to add
+      github: "https://github.com/utkarshkumarsingh",
+      category: "Games",
+      icon: <FaGamepad />,
+      image: ClickCounter
+    },
+    {
+      id: 12,
+      title: "Flip Card Game",
+      description: "A memory-based card matching game built with React, focusing on state management and interactive UI.",
+      tags: ["React", "JavaScript", "CSS"],
+      link: "https://flip-card-react-sandy.vercel.app/",
+      videoLink: "#", // User needs to add
+      github: "https://github.com/utkarshkumarsingh",
+      category: "Games",
+      icon: <FaGamepad />,
+      image: FlipCard
+    },
+    {
+      id: 13,
+      title: "Typing Speed Test",
+      description: "A professional typing test application to measure WPM and accuracy with real-time statistics.",
+      tags: ["React", "JavaScript", "Vite"],
+      link: "https://typing-speed-test-delta-seven.vercel.app/",
+      videoLink: "#", // User needs to add
+      github: "https://github.com/utkarshkumarsingh",
+      category: "Games",
+      icon: <FaGamepad />,
+      image: TypingTestImg
     },
     {
       id: 10,
@@ -77,8 +119,10 @@ export const projectList = [
       description: "A massive full-stack inventory management system actively in development with live data tracking.",
       tags: ["React", "Node.js", "MongoDB"],
       link: "#",
+      videoLink: "#", // User needs to add
+      postmanLink: "#", // Mandatory for Full Stack
       github: "https://github.com/utkarshkumarsingh",
-      category: "Ongoing",
+      category: "Full Stack",
       icon: <FaChartBar />
     }
 ];
@@ -135,4 +179,34 @@ export const hackathonList = [
       icon: <FaLaptop />,
       image: frontendOdeacy
     }
+];
+
+export const achievementList = [
+  {
+    id: 1,
+    title: "36-Hour Hackathon Participant",
+    description: "Designed and developed a fully responsive React portfolio within a 36-hour time limit at Amity AI-WebForge.",
+    date: "April 2026",
+    icon: <FaTrophy />,
+    badge: "Finalist"
+  },
+  {
+    id: 2,
+    title: "Competitive Programming Milestone",
+    description: "Successfully solved complex algorithmic challenges at IIT Hyderabad's Code Clash, demonstrating strong logic and problem-solving skills.",
+    date: "January 2026",
+    icon: <FaMedal />,
+    badge: "Participant"
+  }
+];
+
+export const figmaList = [
+  {
+    id: 1,
+    title: "Modern Portfolio UI",
+    description: "A sleek, dark-themed UI/UX design featuring glassmorphism and interactive components for a professional developer portfolio.",
+    image: frontendOdeacy, // Placeholder
+    link: "https://www.figma.com/", // Add actual figma link
+    tags: ["Figma", "UI/UX", "Design System"]
+  }
 ];

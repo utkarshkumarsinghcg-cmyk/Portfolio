@@ -77,6 +77,11 @@ const AllProjects = () => {
                       <span className="play-icon">▶</span>
                     </a>
                   )}
+                  {project.postmanLink && (
+                    <a href={project.postmanLink} className="btn-modern postman-btn" target="_blank" rel="noopener noreferrer" title="API Docs">
+                      <span className="api-icon">⚡</span>
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}
