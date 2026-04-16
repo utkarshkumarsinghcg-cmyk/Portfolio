@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './Hackathons.css';
 import Reveal from './Reveal';
 import { hackathonList } from '../data';

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './Certificates.css';
 import Reveal from './Reveal';
 import { Link } from 'react-router-dom';

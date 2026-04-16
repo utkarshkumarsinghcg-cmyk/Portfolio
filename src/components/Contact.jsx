@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import {Helmet} from 'react-helmet';
 import emailjs from '@emailjs/browser';
 import './Contact.css';
 import { FaLinkedinIn, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';

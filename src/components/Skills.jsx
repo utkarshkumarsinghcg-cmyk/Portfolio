@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet';
 import './Skills.css';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaGitAlt, FaPython, FaGithub } from 'react-icons/fa';
 import { SiTailwindcss, SiFigma, SiNumpy, SiPandas, SiMongodb, SiRedux, SiPostman, SiVercel, SiNetlify, SiExpress } from 'react-icons/si';

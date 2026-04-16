@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Helmet} from 'react-helmet';
 import './Projects.css';
 import Reveal from './Reveal';
 import { Link } from 'react-router-dom';

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Helmet} from 'react-helmet';
 import './Hero.css';
 import { FaReact, FaNodeJs, FaJs, FaDatabase, FaDownload } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb } from 'react-icons/si';
